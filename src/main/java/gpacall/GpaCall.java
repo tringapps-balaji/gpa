@@ -14,7 +14,7 @@ public class GpaCall {
         this.name = name;
     }
 
-    public void Gpacalculate(String grade) {
+    public void gpaCalculate(String grade) {
         switch (grade) {
             case "A" -> {
                 this.temp = 1;
@@ -35,11 +35,11 @@ public class GpaCall {
             default -> lg.info("Invalid choice");
         }
     }
-    public String Dispgpa() {
+    public String dispGpa() {
         return this.name + " has " + this.gpa + " gpa ";
     }
 
-    public void Updategpa() {
+    public void updateGpa() {
         Scanner sc = new Scanner(System.in);
        lg.info("do you need to update gpa(yes/no)");
         String des = sc.next();
@@ -47,8 +47,8 @@ public class GpaCall {
             this.gpa = 0;
            lg.info("enter the student grade:");
             String grade = sc.next();
-            Gpacalculate(grade);
-            lg.info(Dispgpa());
+            gpaCalculate(grade);
+            lg.info(dispGpa());
         }
     }
 }

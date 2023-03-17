@@ -12,8 +12,8 @@ public class GpaMain {
         GpaCall gc = new GpaCall(name);
         lg.info("Enter the grade: ");
         String grade = sc.next();
-        gc.Gpacalculate(grade);
-        lg.info(gc.Dispgpa());
-        gc.Updategpa();
+        gc.gpaCalculate(grade);
+        lg.info(gc.dispGpa());
+        gc.updateGpa();
     }
 }

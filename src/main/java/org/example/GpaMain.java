@@ -1,6 +1,6 @@
 package org.example;
 import gpacall.GpaCall;
-
+import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.Scanner;
 public class GpaMain {
@@ -13,7 +13,7 @@ public class GpaMain {
         lg.info("Enter the grade: ");
         String grade = sc.next();
         gc.gpaCalculate(grade);
-        lg.info(gc.dispGpa());
+        lg.log(Level.INFO,()-> gc.dispGpa());
         gc.updateGpa();
     }
 }
